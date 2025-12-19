@@ -1,0 +1,16 @@
+{
+  "name": "آکادمی آموزشی آرمین",
+  "short_name": "آکادمی آرمین",
+  "description": "اپلیکیشن جامع آموزشی رشته کامپیوتر",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f4f7f6",
+  "theme_color": "#0984e3",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/201/201818.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+@font-face { font-family: 'BTitr'; src: url('https://fonts.cdnfonts.com/s/73155/BTitrBold.woff') format('woff'); }
+
+:root {
+    --bg: #f2f5f8;
+    --primary: #007aff;
+    --card: #ffffff;
+    --text: #1c1c1e;
+    --accent: #5856d6;
+}
+
+body.dark {
+    --bg: #1c1c1e;
+    --card: #2c2c2e;
+    --text: #f2f2f7;
+    --primary: #0a84ff;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding-bottom: 70px;
+    transition: 0.3s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.titr { font-family: 'BTitr', sans-serif; }
+
+.app-header {
+    background: var(--card);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+
+.hero-banner {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    margin: 15px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,122,255,0.2);
+}
+
+.grade-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 15px;
+    scrollbar-width: none;
+}
+
+.grade-tabs a {
+    background: var(--card);
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: var(--text);
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.grade-tabs a.active { background: var(--primary); color: white; }
+
+.course-card {
+    background: var(--card);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.badge { background: #e5e5ea; padding: 4px 10px; border-radius: 8px; font-size: 11px; color: #3a3a3c; }
+
+.download-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.app-nav {
+    background: var(--card);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+.nav-item { text-decoration: none; color: gray; text-align: center; font-size: 10px; }
+.nav-item span { display: block; margin-top: 4px; font-size: 11px; }
+
+/* انیمیشن‌ها */
+.animate-fade { animation: fadeIn 0.5s ease; }
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; justify-content: center; align-items: center; }
+.modal:target { display: flex; }
+.modal-content { background: var(--card); padding: 30px; border-radius: 25px; width: 80%; max-width: 300px; }
